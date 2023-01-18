@@ -1,6 +1,10 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\EssentialController;
+use App\Http\Controllers\AppleController;
+use App\Http\Controllers\StarbucksController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -16,3 +20,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::resource('/essentials',EssentialController::class);
+Route::resource('/apple',AppleController::class);
+Route::resource('/starbucks',StarbucksController::class);
