@@ -13,6 +13,7 @@ class EssentialController extends Controller
      */
     public function index()
     {
+        \Log::info("index");
         return view('essentials.index');
     }
 
@@ -45,7 +46,7 @@ class EssentialController extends Controller
      */
     public function show($id)
     {
-        //
+        \Log::info("show : ".$id);
     }
 
     /**
